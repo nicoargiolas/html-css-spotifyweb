@@ -7,6 +7,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    min-width: 340px;
 }
 
 /* Versione desktop */
@@ -35,6 +36,10 @@ body {
     padding: 20px 70px 20px 0;
 }
 
+#logo-xs {
+    display: none;
+}
+
 .side-column ul {
     list-style: none;
 }
@@ -56,11 +61,23 @@ body {
     height: auto;
 }
 
-.playlists .add-playlist span {
+.side-col-library li {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.playlists h5 {
+    font-size: 14px;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.playlists .add-playlist span:first-child {
     background-color: gray;
     color: black;
-    font-size: 40px;
-    padding: 0 13px;
+    font-size: 20px;
+    padding: 0 8px;
 }
 
 .playlists p {
@@ -111,12 +128,14 @@ main {
     justify-content: center;
     color: grey;
     list-style: none;
+    flex-wrap: wrap;
     font-size: 14px;
     padding-bottom: 20px;
 }
 
 .main-menu li {
     padding: 10px;
+    font-size: 12px;
     font-weight: 600;
 }
 
@@ -141,19 +160,26 @@ main {
 
 .album {
     padding-right: 10px;
+    min-width: 100px;
+    max-width: 200px;
+    width: calc(100% / 6);
 }
 
 .album h4 {
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 h5 {
     color: grey;
 }
 
+.album h5 {
+    padding-bottom: 5px;
+}
+
 .album img {
-    max-width: 160px;
     height: auto;
+    width: 100%;
 }
 
 .album h4, .album h5 {
@@ -165,10 +191,49 @@ h5 {
     padding-top: 10px;
 }
 
-
-
-
 .music-bar {
     height: 100px;
     background-color: #282828
+}
+
+/* Versione mid */
+
+@media screen and (max-width: 878px) {
+    
+}
+
+/* Versione small */
+
+@media screen and (max-width: 639px) {
+    
+}
+
+/* Versione extrasmall */
+
+@media screen and (max-width: 552px) {
+
+    /* Colonna di navigazione */
+    .side-column {
+        width: 70px;
+    }
+
+    .logo {
+        padding: 10px 0;
+    }
+
+    #logo-xs {
+        display: inline-block;
+        padding: 0;
+        width: 30px;
+        height: auto;
+    }
+
+    .remove-in-xs {
+        display: none;
+    }
+
+    /* Contenuto principale */
+    main {
+        width: calc(100% - 70px);
+    }
 }
