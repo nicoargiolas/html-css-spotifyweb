@@ -215,6 +215,10 @@ h5 {
     padding-top: 10px;
 }
 
+/* Player */
+
+    /* Da sistemare il responsive (tutte le distanze in pixel)  */
+
 .music-bar {
     height: 100px;
     background-color: #282828;
@@ -222,6 +226,8 @@ h5 {
     justify-content: space-between;
     align-items: center;
 }
+
+    /* Lati */
 
 .player-side {
     display: flex;
@@ -233,6 +239,8 @@ h5 {
     width: 20%;
     height: 50px;
 }
+
+    /* Lato destro */
 
 .player-side img {
     height: 100%;
@@ -252,6 +260,8 @@ h5 {
     padding: 0 5px;
 }
 
+/* Lato sinistro */
+
 .music-bar .player-side:last-child {
    justify-content: space-between;
 }
@@ -270,8 +280,12 @@ h5 {
     display: inline-block;
     border: 2px solid grey;
     border-radius: 2px;
+
+    /* DEBUG */ /* Sistemare per il responsive */
     width: 100px;
 }
+
+
 
 .music-bar .player-center {
     display: flex;
@@ -279,9 +293,47 @@ h5 {
     align-items: center;
 
     /* DEBUG */
-    background-color: blue;
     width: 50%;
     height: 80px;
+}
+
+.music-bar .track-control {
+    padding: 10px;
+}
+
+.player-center i:not(.fa-play) {
+    padding: 0 10px;
+}
+
+.player-center .play {
+    padding: 0px 20px;
+}
+
+.player-center .fa-play {
+    padding: 3px 5px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.track-time {
+    display: flex;
+    align-items: center;
+}
+
+.track-time span:not(.track-time-bar) {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.track-time .track-time-bar {
+    display: inline-block;
+    border: 2px solid grey;
+    border-radius: 2px;
+    margin: 0 20px;
+
+    /* DEBUG */
+    width: 300px;
 }
 
 
