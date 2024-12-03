@@ -78,18 +78,97 @@ body {
     height: auto;
 }
 
+    /* Contenuto principale */
 main {
     width: calc(100% - 250px);
     height: calc(100vh - 100px);
     overflow: auto;
-
-    /* DEBUG */
-    background-color: lightblue;
+    background-color: #141922
 }
+
+    /* Barra upgrade */
+.upgrade-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgba(0,0,0,0.5);
+    height: 80px;
+}
+
+.upgrade-row a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: solid white 1px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+    /* Parte principale */
+.main-menu {
+    display: flex;
+    justify-content: center;
+    color: grey;
+    list-style: none;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+.main-menu li {
+    padding: 10px;
+    font-weight: 600;
+}
+
+.main-content {
+    padding-left: 20px;
+}
+
+.main-content h2, .main-content h4 {
+    color: white;
+    font-weight: 600;
+}
+
+.album-section {
+    padding-bottom: 40px;
+}
+
+.album-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.album {
+    padding-right: 10px;
+}
+
+.album h4 {
+    padding: 10px 0;
+}
+
+h5 {
+    color: grey;
+}
+
+.album img {
+    max-width: 160px;
+    height: auto;
+}
+
+.album h4, .album h5 {
+    width: 100%;
+    text-align: center;
+}
+
+.alb-sect-subtitle {
+    padding-top: 10px;
+}
+
+
+
 
 .music-bar {
     height: 100px;
-
-    /* DEBUG */
-    background-color: grey;
+    background-color: #282828
 }
