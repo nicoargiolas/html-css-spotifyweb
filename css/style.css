@@ -231,13 +231,12 @@ h5 {
 
 .player-side {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 0 10px;
 
     /* DEBUG */
-    width: 20%;
-    height: 50px;
+    width: 30%;
+    height: 50%;
 }
 
     /* Lato destro */
@@ -251,9 +250,8 @@ h5 {
     padding: 0 10px;
 }
 
-.player-side .track-buttons {
+.music-bar .player-side:first-child .btn {
     color: grey;
-    margin-left: 10%;
 }
 
 .player-side i {
@@ -263,7 +261,7 @@ h5 {
 /* Lato sinistro */
 
 .music-bar .player-side:last-child {
-   justify-content: space-between;
+   justify-content: flex-end;
 }
 
 .music-bar .btn {
@@ -274,6 +272,8 @@ h5 {
     padding-left: 10px;
     display: flex;
     align-items: center;
+
+    width: 70%;
 }
 
 .player-side .volume-level {
@@ -282,7 +282,7 @@ h5 {
     border-radius: 2px;
 
     /* DEBUG */ /* Sistemare per il responsive */
-    width: 100px;
+    width: 80%;
 }
 
 
@@ -293,7 +293,7 @@ h5 {
     align-items: center;
 
     /* DEBUG */
-    width: 50%;
+    width: 40%;
     height: 80px;
 }
 
@@ -318,6 +318,7 @@ h5 {
 .track-time {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .track-time span:not(.track-time-bar) {
@@ -333,15 +334,8 @@ h5 {
     margin: 0 20px;
 
     /* DEBUG */
-    width: 300px;
+    width: 80%;
 }
-
-
-
-
-
-
-
 
 
 
@@ -363,6 +357,44 @@ h5 {
     .album {
         width: calc(100% / 2);
     }
+
+    /* Ridimensionamento testi */
+
+    h4 {
+        font-size: 12px;
+    }
+
+    main h5, .music-bar h5 {
+        font-size: 10px;
+    }
+
+    /* Ridimensionamento player */
+
+    .player-side i {
+        padding: 0 2px;
+    }
+
+    .player-side .track-buttons {
+        margin-left: 1px;
+    }
+
+    .player-side .volume {
+        padding-left: 5px;
+    }
+
+    .player-center i:not(.fa-play) {
+        padding: 0 1px;
+    }
+
+    .player-center .play {
+        padding: 0px 5px;
+    }
+
+    .track-time .track-time-bar {
+        margin: 0 5px;
+    }
+
+
     
 }
 
@@ -393,5 +425,14 @@ h5 {
     /* Contenuto principale */
     main {
         width: calc(100% - 70px);
+    }
+
+    /* Player */
+    .music-bar i {
+        font-size: 10px;
+    }
+
+    .player-side img {
+        display: none;
     }
 }
