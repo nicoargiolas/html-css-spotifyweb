@@ -25,17 +25,20 @@ body {
     color: grey;
     font-weight: 600;
     font-size: 12px;
-    padding: 0 20px;
     justify-content: space-between;
     background-color: black;
+}
+
+.side-column>*>*:not(.side-col-library) {
+    padding: 0 20px;
 }
 
 .hover-white:hover {
     color: white;
 }
 
-.logo {
-    padding: 20px 70px 20px 0;
+#logo {
+    padding: 20px 70px 20px 20px;
 }
 
 #logo-xs {
@@ -54,6 +57,7 @@ body {
 .side-col-library {
     width: 100%;
     padding-bottom: 30px;
+    padding-left: 0;
 }
 
 .side-col-library img {
@@ -66,7 +70,11 @@ body {
 .side-col-library li {
     display: flex;
     align-items: center;
-    padding: 5px 0;
+    padding: 5px 20px;
+}
+
+.side-col-library li:active {
+    border-left: 2px solid rgb(181, 255, 50);
 }
 
 .playlists h5 {
@@ -90,30 +98,31 @@ body {
     padding-bottom: 15px;
 }
 
-.download {
+#download {
     width: 100%;
     display: block;
     padding-bottom: 10px;
-    border-bottom: 1px solid grey;
 }
 
-.download span:first-child  {
+#download span:first-child  {
     border: solid 1px grey;
     border-radius: 50%;
     padding: 0 2px;
 }
 
-.profile {
+#profile {
     display: flex;
     align-items: center;
     padding: 10px 0;
+    margin: 0 20px;
+    border-top: 1px solid grey;
 }
 
-.profile span {
+#profile span {
     color: white;
 }
 
-.profile img {
+#profile img {
     width: 20px;
     height: auto;
     background-color: grey;
@@ -126,7 +135,7 @@ main {
     width: calc(100% - 250px);
     height: calc(100vh - 100px);
     overflow: auto;
-    background-color: #141922
+    background-color: #141922;
 }
 
     /* Barra upgrade */
@@ -162,14 +171,31 @@ main {
     list-style: none;
     flex-wrap: wrap;
     font-size: 14px;
-    margin-top: 80px;
+    margin-top: 90px;
     padding-bottom: 20px;
 }
 
 .main-menu li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-menu li span {
     padding: 10px;
     font-size: 12px;
     font-weight: 600;
+}
+
+.main-menu li .main-menu-active {
+    width: 30px;
+    height: 2px;
+    color: transparent;
+}
+
+.main-menu li:active .main-menu-active {
+    color: rgb(181, 255, 50);
 }
 
 .main-content {
@@ -480,6 +506,10 @@ h5 {
 
     .remove-in-xs {
         display: none;
+    }
+
+    #profile {
+        border-top: 1px solid transparent;
     }
 
     /* Contenuto principale */
