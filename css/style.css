@@ -353,15 +353,62 @@ h5 {
 }
 
 .player-side .volume-level {
-    display: inline-block;
-    border: 2px solid grey;
-    border-radius: 2px;
-
-    /* DEBUG */ /* Sistemare per il responsive */
+    height: 4px;
+    display: flex;
+    align-items: center;
+    position: relative;
     width: 80%;
 }
 
+.music-bar .total {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid grey;
+    border-radius: 2px;
+    width: 100%;
+}
 
+.music-bar .progression {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid white;
+    border-radius: 2px;
+    width: 20%;
+}
+
+.track-time-bar:hover .progression{
+    border: 2px solid rgb(181, 255, 50);
+}
+
+.volume-level:hover .progression{
+    border: 2px solid rgb(181, 255, 50);    
+}
+
+.track-time-bar:hover .level-circle{
+    display: block;
+}
+
+.volume-level:hover .level-circle{
+    display: block;
+}
+
+.music-bar .level-circle {
+    color: white;
+    position: absolute;
+    font-size: 12px;
+    left: calc(20% - 16px);
+    display: none;
+}
+
+.music-bar .total:hover .level-circle {
+    display: block;
+}
+
+.fa-circle {
+    padding: 0;
+}
 
 .music-bar .player-center {
     display: flex;
@@ -414,14 +461,14 @@ h5 {
 }
 
 .track-time .track-time-bar {
-    display: inline-block;
-    border: 2px solid grey;
-    border-radius: 2px;
+    display: flex;
+    align-items: center;
     margin: 0 20px;
-
-    /* DEBUG */
     width: 80%;
+    height: 6px;
+    position: relative;
 }
+
 
 
 
