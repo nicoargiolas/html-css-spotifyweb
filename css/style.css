@@ -29,6 +29,10 @@ body {
     background-color: black;
 }
 
+.side-column .side-col-top {
+    overflow: auto;
+}
+
 .side-column>*>*:not(.side-col-library) {
     padding: 0 20px;
 }
@@ -61,10 +65,14 @@ body {
 }
 
 .side-col-library img {
-    /* Cambiare colore alle immagini */
-
     width: 30px;
     height: auto;
+    opacity: 50%;
+}
+
+/* Non riesco a far diventare le icone bianche con l'hover */
+.hover-white:hover .side-col-library{
+    opacity: 100%;
 }
 
 .side-col-library li {
@@ -94,6 +102,10 @@ body {
     padding-bottom: 15px;
 }
 
+.playlists ul {
+    min-height: 30%;
+}
+
 .playlists li {
     padding-bottom: 15px;
 }
@@ -102,6 +114,7 @@ body {
     width: 100%;
     display: block;
     padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 #download span:first-child  {
@@ -161,6 +174,7 @@ main {
 
 .upgrade-row a:hover {
     font-size: 18px;
+    margin-right: 10px;
 }
 
     /* Parte principale */
@@ -248,7 +262,7 @@ h5 {
 
 .album-img-hover {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 5px); /* Per recuperare i 5px in più */
     background-color: rgba(0,0,0,0.3);
     color: white;
     font-size: 50px;
@@ -446,6 +460,7 @@ h5 {
 
 .player-center .play:hover {
     font-size: 18px;
+    padding: 0 19px;
 }
 
 .track-time {
